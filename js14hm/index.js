@@ -252,4 +252,18 @@ let other = []
 
 // console.log(emails,other);
 
-for()
+for(let item = 0; item<= users.length - 1; item++) {
+    let key = users[item].email.split('.')
+
+    if (key === 'org') {
+        emails.org.push(users[item])
+    } else if (key === 'net') {
+        emails.net.push(users[item])
+    } else if (key === 'info') {
+        emails.info.push(users[item])
+    } else {
+        other.push(users[item])
+    }
+}
+
+console.log(emails, other);
